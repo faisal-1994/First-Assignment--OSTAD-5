@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style .css">
+</head>
+<body class="bg-dark">
+    <div class="container-fluid">
+
+        
+ <!-- Navbar -->
+ <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <a class="navbar-brand ms-5" href="#">ABC ☀</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="#">🏡Home</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">🧿About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">📞Contact</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<section id="banner">
+    <div class="banner_overlay">
+        <div class="container">
+
+            <section class="d-flex justify-content-center mt-2">
+
+                <div class="card m-auto"  style=" width: 18rem;">
+                    <div >
+                        <img class="card-img-top" src="https://images.pexels.com/photos/13548702/pexels-photo-13548702.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" style="height: 200px;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Scene1</h5>
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni eum recusandae libero. Voluptas explicabo, nisi beatae veritatis minima possimus perferendis maiores amet quo officiis magni, ullam soluta accusantium, voluptates laboriosam modi quod dolore eius?
+                        </div>
+                    </div>
+                </div>
+
+                              <div class="card m-auto"  style=" width: 18rem;">
+                    <div >
+                        <img class="card-img-top" src="https://images.pexels.com/photos/1743165/pexels-photo-1743165.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" style="height: 200px;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Scene2</h5>
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni eum recusandae libero. Voluptas explicabo, nisi beatae veritatis minima possimus perferendis maiores amet quo officiis magni, ullam soluta accusantium, voluptates laboriosam modi quod dolore eius?
+                        </div>
+                    </div>
+                </div>
+                <div class="card m-auto"  style=" width: 18rem;">
+                    <div >
+                        <img class="card-img-top" src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" style="height: 200px;">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Scene3</h5>
+                        <div class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est magni eum recusandae libero. Voluptas explicabo, nisi beatae veritatis minima possimus perferendis maiores amet quo officiis magni, ullam soluta accusantium, voluptates laboriosam modi quod dolore eius?
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section class="mt-5">
+              
+              <div class="row bg-secondary">
+                  <div id="cardHolder" class="col-3 m-auto pt-3 pb-2 card bg-primary text-light">
+                      <label for=""><b><p class="ms-2">Age:</p></b></label>
+                      <input id="userInput" type="number" class="ms-2"><br><br>
+                      <button onclick="main()" class="m-auto"><b>submit</b></button>
+                  </div>
+              </div>
+          
+              <div id="card" class="card m-auto d-none" style="width: 18rem;">
+                  <img src="https://images.pexels.com/photos/19521929/pexels-photo-19521929/free-photo-of-stars-in-the-sky-at-night.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text"><b class="ms-5">You are an adult</b></p>
+                    <a href="index.html" class="btn btn-primary">Go homepage</a>
+                  </div>
+              </div>
+          
+              <div id="card2" class="card m-auto d-none" style="width: 18rem;">
+                  <img src="https://images.pexels.com/photos/19521929/pexels-photo-19521929/free-photo-of-stars-in-the-sky-at-night.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title ms-5">Hello</h5>
+                    <p class="card-text"><b class="ms-5">You are a child</b></p>
+                    <a href="index.html" class="btn btn-primary">Go homepage</a>
+                  </div>
+              </div>
+              
+            
+              
+            </section>
+            
+            
+
+            <script>
+                function main(){
+                    
+                    let input = document.getElementById("userInput");
+                    let valusOfInput = input.value;
+
+                    let cardHolder = document.getElementById("cardHolder")
+                    
+                    if (valusOfInput>0 && valusOfInput<18) {
+                        let card2= document.getElementById("card2");
+                        card2.classList.remove("d-none");
+                        card.classList.add("d-none");
+                        cardHolder.classList.add("d-none");
+                    } 
+                    else if(valusOfInput>=18){
+                        let card= document.getElementById("card");
+                        card.classList.remove("d-none");
+                        card2.classList.add("d-none");
+                        cardHolder.classList.add("d-none");     
+                }
+        
+                else{
+                    alert("Please enter your correct age, avoid negative number")
+                }
+        
+                }
+                
+            </script>
+        </div>
+            
+    </div>
+            
+</section>
+
+
+<section class="footer bg-info mt-4">
+    <h6 class="text-dark text-center pt-3">Copy right all reserved by ABC Company</h6>
+</section>
+    </div>
+</body>
+</html>
